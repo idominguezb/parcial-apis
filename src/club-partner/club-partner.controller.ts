@@ -1,4 +1,4 @@
-import { Body, Controller, Delete, Get, HttpCode, Param, Post, UseInterceptors } from "@nestjs/common";
+import { Body, Controller, Delete, Get, HttpCode, Param, Post, Put, UseInterceptors } from "@nestjs/common";
 import { BusinessErrorsInterceptor } from '../shared/interceptors/business-errors/business-errors.interceptor';
 import { ClubPartnerService } from './club-partner.service';
 import { PartnerDto } from '../partner/partner.dto';
@@ -24,7 +24,7 @@ export class ClubPartnerController {
   async findMemberFromClub(@Param('clubId') clubId: string, @Param('partnerId') partnerId: string){
     return await this.clubPartnerService.findMemberFromClub(clubId, partnerId);
   }
-  @Get(':clubId/members/')
+  @Put(':clubId/members/')
   async updateMembersFromClub(@Param('clubId') clubId: string, @Body() partnerDto: PartnerDto[]){
     const partners = plainToInstance(PartnerEntity, partnerDto);
     return await this.clubPartnerService.updateMembersFromClub(clubId, partners);
