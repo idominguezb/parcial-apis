@@ -12,6 +12,7 @@ export class ClubPartnerController {
 
   @Post(':clubId/members/:partnerId')
   async addArtworkMuseum(@Param('clubId') clubId: string, @Param('partnerId') partnerId: string){
+    console.log('aaaaaaaaaa clubId', clubId, partnerId);
     return await this.clubPartnerService.addMemberToClub(clubId, partnerId);
   }
 

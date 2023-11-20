@@ -10,7 +10,7 @@ async function bootstrap() {
     defaultVersion: '1',
   });
   app.useGlobalPipes(new ValidationPipe());
-  await app.listen(4000);
+  await app.listen(3000);
 }
 bootstrap();
 

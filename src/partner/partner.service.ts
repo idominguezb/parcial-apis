@@ -23,7 +23,7 @@ export class PartnerService {
     });
     if (!partner)
       throw new BusinessLogicException(
-        'The partner with the given id was not found',
+        'The member with the given id was not found',
         BusinessError.NOT_FOUND,
       );
 
@@ -53,7 +53,7 @@ export class PartnerService {
 
     if (!persistedPartner)
       throw new BusinessLogicException(
-        'The partner with the given id was not found',
+        'The member with the given id was not found',
         BusinessError.NOT_FOUND,
       );
 
@@ -80,7 +80,7 @@ export class PartnerService {
     });
     if (!partner)
       throw new BusinessLogicException(
-        'The partner with the given id was not found',
+        'The member with the given id was not found',
         BusinessError.NOT_FOUND,
       );
 
